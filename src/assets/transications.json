@@ -1,0 +1,176 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "name": "Ahmed Ali ",
+            "transications": [
+                {
+                    "store_name": "apple store",
+                    "payment_method": "cash",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 2,
+            "name": "Aya Elsayed ",
+            "transications": [
+                {
+                    "store_name": "apple store",
+                    "payment_method": "cash",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 3,
+            "name": "Mina Adel ",
+            "transications": [
+                {
+                    "store_name": "sonny store",
+                    "payment_method": "cash",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "defacto store",
+                    "payment_method": "cash",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 4,
+            "name": " Mohamed Ahmed",
+            "transications": [
+                {
+                    "store_name": "kiko store",
+                    "payment_method": "visa",
+                    "price": 10000
+                },
+                {
+                    "store_name": "zara store",
+                    "payment_method": "visa",
+                    "price": 1000
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": 10000
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 5,
+            "name": "Sara Ahmed",
+            "transications": [
+                {
+                    "store_name": "apple store",
+                    "payment_method": "cash",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 6,
+            "name": "kholoud Alaa ",
+            "transications": [
+                {
+                    "store_name": "apple store",
+                    "payment_method": "visa",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "visa",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        },
+        {
+            "id": 7,
+            "name": "Radwa Taha ",
+            "transications": [
+                {
+                    "store_name": "LG store",
+                    "payment_method": "cash",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": 1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "samsung",
+                    "payment_method": "E-wallet",
+                    "price": 10000,
+                    "date": "1/10/2023"
+                }
+            ],
+            "total": 0
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+<div class="card">
+    <p-table [value]="customers" dataKey="name" [tableStyle]="{ 'min-width': '60rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 5rem"></th>
+                <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="Id">Id <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="total_Payment">total Payment <p-sortIcon field="total_Payment"></p-sortIcon></th>
+                <th pSortableColumn="number_of_transications ">number of transications <p-sortIcon field="number_of_transications"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer let-expanded="expanded">
+            <tr>
+                <td>
+                    <button type="button" pButton pRipple [pRowToggler]="customer" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                </td>
+                <td>{{ customer.name}}</td>
+                <td>{{ customer.id  }}</td>
+                <td>{{ customer.total }}</td>
+                <td>{{ customer.transications.length }}</td>
+
+               
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-customer>
+            <tr>
+                <td colspan="7">
+                    <div class="p-3">
+                        <p-table [value]="customer.transications" dataKey="id">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th pSortableColumn="store_name">store name </th>
+                                    <th pSortableColumn="price">price </th>
+                                    <th pSortableColumn="payment_method ">payment method </th>
+                                    <th pSortableColumn="date ">date</th>
+
+                                    <th style="width: 4rem"></th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-transication>
+                                <tr>
+                                    <td>{{ transication.store_name }}</td>
+                                    <td>{{ transication.price | currency: 'USD' }}</td>
+                                    <td>{{ transication.payment_method }}</td>
+                                    <td>{{ transication.date }}</td>
+                                    <!-- <td>
+                                        <p-tag [value]="order.status" [severity]="getStatusSeverity(order.status)"></p-tag>
+                                    </td> -->
+                                    <td><p-button type="button" icon="pi pi-plus"></p-button></td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td colspan="6">There are no order for this product yet.</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
