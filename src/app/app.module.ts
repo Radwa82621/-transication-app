@@ -13,6 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableModule } from 'primeng/table';
 import {HttpClientModule } from '@angular/common/http';
+import { ChartModule} from 'primeng/chart';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import {HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
