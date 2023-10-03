@@ -7,6 +7,7 @@ export interface Customer {
 
 
 export interface Transication{
+    "date":string,
     "store_name": string  ,
     "payment_method": string ,
     "price":number

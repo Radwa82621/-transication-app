@@ -7,48 +7,154 @@
                 {
                     "store_name": "apple store",
                     "payment_method": "cash",
-                    "price": 10000,
+                    "price": -10000,
                     "date": "2/10/2023"
+                    
+                }, {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": -1000,
+                    "date": "2/10/2023"
+                },
+                {
+                    "store_name": "defacto store",
+                    "payment_method": "cash",
+                    "price": -1000,
+                    "date": "2/10/2023"
+                    
+                },
+                {
+                    "store_name": "salery",
+                    "payment_method": "visa",
+                    "price": 60000,
+                    "date": "1/10/2023"
+                },
+               
+                {
+                    "store_name": "sonny store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "mazaya store",
+                    "payment_method": "E-wallet",
+                    "price": -5000,
+                    "date": "1/10/2023"
+                },   {
+                    "store_name": "zara store",
+                    "payment_method": "cash",
+                    "price": -2000,
+                    "date": "30/9/2023"
+                    
                 },
                 {
                     "store_name": "lc store",
                     "payment_method": "visa",
-                    "price": 1000,
-                    "date": "1/10/2023"
+                    "price": -1000,
+                    "date": "30/9/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "E-wallet",
-                    "price": 10000,
-                    "date": "1/10/2023"
+                    "price": -10000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "bath and body works",
+                    "payment_method": "E-wallet",
+                    "price": -1000,
+                    "date": "30/9/2023"
                 }
             ],
-            "total": 0
+            "total": 28000
         },
         {
             "id": 2,
             "name": "Aya Elsayed ",
             "transications": [
                 {
-                    "store_name": "apple store",
+                    "store_name": "samsung store",
                     "payment_method": "cash",
-                    "price": 10000,
-                    "date": "1/10/2023"
+                    "price": -10000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "lc store",
                     "payment_method": "visa",
-                    "price": 1000,
-                    "date": "1/10/2023"
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "E-wallet",
-                    "price": 10000,
+                    "price": -20000,
                     "date": "1/10/2023"
+                },
+                {
+                    "store_name": "Upwork salery",
+                    "payment_method": "E-wallet",
+                    "price": 100000,
+                    "date": "2/10/2023"
+                    
+                }, {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": -1000,
+                    "date": "2/10/2023"
+                },
+                {
+                    "store_name": "defacto store",
+                    "payment_method": "cash",
+                    "price": -1000,
+                    "date": "2/10/2023"
+                    
+                },
+                {
+                    "store_name": "salery",
+                    "payment_method": "visa",
+                    "price": 60000,
+                    "date": "1/10/2023"
+                },
+               
+                {
+                    "store_name": "sonny store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "mazaya store",
+                    "payment_method": "E-wallet",
+                    "price": -5000,
+                    "date": "1/10/2023"
+                },   {
+                    "store_name": "zara store",
+                    "payment_method": "cash",
+                    "price": -2000,
+                    "date": "30/9/2023"
+                    
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": -10000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "bath and body works",
+                    "payment_method": "E-wallet",
+                    "price": -1000,
+                    "date": "30/9/2023"
                 }
             ],
-            "total": 0
+            "total": 107000
         },
         {
             "id": 3,
@@ -57,23 +163,40 @@
                 {
                     "store_name": "sonny store",
                     "payment_method": "cash",
-                    "price": 10000,
-                    "date": "1/10/2023"
+                    "price": -10000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "defacto store",
                     "payment_method": "cash",
-                    "price": 1000,
+                    "price": -1000,
                     "date": "1/10/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "E-wallet",
-                    "price": 10000,
+                    "price": -10000,
                     "date": "1/10/2023"
-                }
+                },{
+                "store_name": "LG store",
+                "payment_method": "cash",
+                "price": -10000,
+                "date": "1/10/2023"
+            },
+            {
+                "store_name": "lc store",
+                "payment_method": "visa",
+                "price": -1000,
+                "date": "1/10/2023"
+            },
+            {
+                "store_name": "samsung",
+                "payment_method": "E-wallet",
+                "price": -2000,
+                "date": "30/9/2023"
+            }
             ],
-            "total": 0
+            "total": -34000
         },
         {
             "id": 4,
@@ -82,20 +205,60 @@
                 {
                     "store_name": "kiko store",
                     "payment_method": "visa",
-                    "price": 10000
+                    "price": -10000,
+                    "date": "2/10/2023"
+
                 },
                 {
                     "store_name": "zara store",
                     "payment_method": "visa",
-                    "price": 1000
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "E-wallet",
-                    "price": 10000
+                    "price": -3000,
+                    "date": "2/10/2023"
+                }, {
+                    "store_name": "salery",
+                    "payment_method": "visa",
+                    "price": 60000,
+                    "date": "1/10/2023"
+                },
+               
+                {
+                    "store_name": "sonny store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "mazaya store",
+                    "payment_method": "E-wallet",
+                    "price": -5000,
+                    "date": "1/10/2023"
+                },   {
+                    "store_name": "zara store",
+                    "payment_method": "cash",
+                    "price": -2000,
+                    "date": "30/9/2023"
+                    
+                },   {
+                    "store_name": "aram store",
+                    "payment_method": "cash",
+                    "price": -20000,
+                    "date": "30/9/2023"
+                    
+                },   {
+                    "store_name": "golld's gym",
+                    "payment_method": "cash",
+                    "price": -2000,
+                    "date": "30/9/2023"
+                    
                 }
             ],
-            "total": 0
+            "total": 16000
         },
         {
             "id": 5,
@@ -104,73 +267,116 @@
                 {
                     "store_name": "apple store",
                     "payment_method": "cash",
-                    "price": 1000,
-                    "date": "1/10/2023"
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "lc store",
                     "payment_method": "visa",
-                    "price": 1000,
-                    "date": "1/10/2023"
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "E-wallet",
-                    "price": 10000,
+                    "price": -4000,
+                    "date": "2/10/2023"
+                }, {
+                    "store_name": "salery",
+                    "payment_method": "cash",
+                    "price": 12000,
                     "date": "1/10/2023"
+                },
+                {
+                    "store_name": "mzaya store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "upwork salery",
+                    "payment_method": "E-wallet",
+                    "price": 25000,
+                    "date": "1/10/2023"
+                }, {
+                    "store_name": "apple store",
+                    "payment_method": "cash",
+                    "price": -1000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "lc store",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "carrefour",
+                    "payment_method": "E-wallet",
+                    "price": -4000,
+                    "date": "30/9/2023"
                 }
             ],
-            "total": 0
+            "total": 24000
         },
         {
             "id": 6,
             "name": "kholoud Alaa ",
             "transications": [
                 {
-                    "store_name": "apple store",
+                    "store_name": "dentist",
                     "payment_method": "visa",
-                    "price": 10000,
-                    "date": "1/10/2023"
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "lc store",
-                    "payment_method": "visa",
-                    "price": 1000,
-                    "date": "1/10/2023"
+                    "payment_method": "cash",
+                    "price": -1000,
+                    "date": "2/10/2023"
                 },
                 {
                     "store_name": "carrefour",
                     "payment_method": "visa",
-                    "price": 10000,
-                    "date": "1/10/2023"
-                }
-            ],
-            "total": 0
-        },
-        {
-            "id": 7,
-            "name": "Radwa Taha ",
-            "transications": [
-                {
-                    "store_name": "LG store",
-                    "payment_method": "cash",
-                    "price": 10000,
+                    "price": -5000,
                     "date": "1/10/2023"
                 },
                 {
+                    "store_name": "mazaya",
+                    "payment_method": "visa",
+                    "price": -1000,
+                    "date": "1/10/2023"
+                },
+                {
+                    "store_name": "salary",
+                    "payment_method": "visa",
+                    "price": 30000,
+                    "date": "1/10/2023"
+                },  {
                     "store_name": "lc store",
                     "payment_method": "visa",
-                    "price": 1000,
+                    "price": -1000,
                     "date": "1/10/2023"
                 },
                 {
-                    "store_name": "samsung",
+                    "store_name": "carrefour",
+                    "payment_method": "cash",
+                    "price":-500,
+                    "date": "30/9/2023"
+                },  {
+                    "store_name": "gold's gym",
+                    "payment_method": "visa",
+                    "price": -5000,
+                    "date": "30/9/2023"
+                },
+                {
+                    "store_name": "Upwork salery",
                     "payment_method": "E-wallet",
-                    "price": 10000,
-                    "date": "1/10/2023"
+                    "price": 100000,
+                    "date": "30/9/2023"
                 }
             ],
-            "total": 0
+            "total": 115500
         }
     ]
 }

@@ -23,7 +23,17 @@ export class TableComponent implements OnInit
   cashCounter:number
   visaCounter:number
   EwalletCounter:number
+  tArray:Transication[]=[]
+  yArray:Transication[]=[]
+  byArray:Transication[]=[]
+tCount:number=0
+yCount:number=0
+byCount:number=0
 
+
+
+searchTerm:string=''
+searchAmount!:number
   constructor(private _CustomerTransicationsService:CustomerTransicationsService) {
     this.cashCounter=0
     this.visaCounter=0
@@ -52,7 +62,12 @@ export class TableComponent implements OnInit
     this.cashCounter=0
     this.visaCounter=0
     this.EwalletCounter=0
-
+ this.tArray=[]
+ this.yArray=[]
+ this.byArray=[]
+ this.tCount=0
+    this.yCount=0
+    this.byCount=0
     this.customerTransication=transicatios
     console.log(this.customerTransication);
     this.customerTransication.forEach(element => {
@@ -93,22 +108,43 @@ export class TableComponent implements OnInit
         }
     };
 
+    this.customerTransication.forEach(element => {
+      if(element.date=="2/10/2023"){
+        this.tArray.push(element)
+      }else if (element.date=="1/10/2023"){
+        this.yArray.push(element)
+      }else if (element.date=="30/9/2023"){
+        this.byArray.push(element)
+      }
+    });
+    this.tArray.forEach((el)=>{
+      this.tCount+=el.price
+    })
+    this.yArray.forEach((el)=>{
+      this.yCount+=el.price
+    }) 
+    this.byArray.forEach((el)=>{
+      this.byCount+=el.price
+    })
+
+console.log(this.tCount+this.byCount+this.yCount);
+
+
     const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
     this.basicData = {
-        labels: ['Q1', 'Q2', 'Q3', 'Q'],
+        labels: ['2/10/2023', '1/10/2023', '30/9/2023'],
         datasets: [
             {
-                label: 'Sales',
-                data: [540, 325, 702, 620],
+                label: 'transications',
+                data: [this.tCount,this.yCount,this.byCount],
                 backgroundColor: ['rgba(255, 159, 64, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(153, 102, 255, 0.2)'],
                 borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
                 borderWidth: 1
             }
         ]
     };
-
     this.basicOptions = {
         plugins: {
             legend: {
