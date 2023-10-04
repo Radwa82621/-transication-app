@@ -48,10 +48,12 @@ export class TableComponent implements OnInit {
 
   searchTerm: string = '';
   searchAmount!: number;
+  filterValue!: number;
   constructor(
     private _CustomerTransicationsService: CustomerTransicationsService,
     private messageService: MessageService
   ) {
+    this.show();
     this.cashCounter = 0;
     this.visaCounter = 0;
     (this.EwalletCounter = 0),
@@ -60,7 +62,6 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     this.getCustomers();
 
-    this.show();
     this.cols = [
       { field: 'name', header: 'Name' },
       { field: 'id', header: 'Id' },
@@ -69,12 +70,10 @@ export class TableComponent implements OnInit {
     ];
   }
   show() {
-    console.log('hello from toaster');
-
     this.messageService.add({
       severity: 'success',
       summary: 'Success',
-      detail: 'Filtered successfully',
+      detail: 'transications Filtered successfully ,please expand table rows',
     });
   }
 
@@ -291,5 +290,12 @@ export class TableComponent implements OnInit {
       type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8',
     });
     saveAs(blob, 'table-export.xlsx');
+  }
+
+  filter() {
+    this.searchAmount = this.filterValue;
+    if (this.filterValue != null) {
+      this.show();
+    }
   }
 }

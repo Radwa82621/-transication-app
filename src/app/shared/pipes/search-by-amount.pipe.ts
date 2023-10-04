@@ -3,26 +3,21 @@ import { Customer, Transication } from '../interfaces/customer';
 import { transition } from '@angular/animations';
 
 @Pipe({
-  name: 'searchByAmount'
+  name: 'searchByAmount',
 })
 export class SearchByAmountPipe implements PipeTransform {
-
-  transform(value: Transication[],term:number):any[] {
-    if(!term||term===null){
-      return value
+  transform(value: Transication[], term: number): any[] {
+    if (!term || term === null) {
+      return value;
     }
-    let array:Transication[]=[]
-    
-  
-    value.forEach((el)=>{
+    let array: Transication[] = [];
 
-      if(el.price===term){
-
-        array.push(el)
-        console.log(array,"123");
-        
+    value.forEach((el) => {
+      if (el.price === term) {
+        array.push(el);
       }
-    })
-    console.log(array)
-return array}
+    });
+
+    return array;
+  }
 }

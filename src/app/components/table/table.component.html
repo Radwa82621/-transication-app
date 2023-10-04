@@ -8,10 +8,11 @@
     />
     <input
       type="number"
-      [(ngModel)]="searchAmount"
-      class="w-50 form-control m-5"
+      [(ngModel)]="filterValue"
+      class="w-50 form-control m-5 me-1"
       placeholder="search By Amount"
     />
+    <p-button label="search" (click)="filter()"></p-button>
   </div>
   <p-table
     #dt
@@ -25,6 +26,7 @@
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [rowsPerPageOptions]="[3, 5, 10]"
     [exportHeader]="'customExportHeader'"
+    styleClass="p-datatable-striped"
   >
     <ng-template pTemplate="caption">
       <div class="d-flex gap-4">
@@ -35,8 +37,7 @@
           icon="pi pi-file"
           (click)="exportTableToCSV(dt)"
           class="mr-2"
-          pTooltip="CSV"
-          tooltipPosition="bottom"
+          pTooltip="export table to CSV"
         ></button>
         <button
           type="button"
@@ -45,7 +46,7 @@
           icon="pi pi-file-excel"
           (click)="exportTableToExcel(dt)"
           class="p-button-success mr-2"
-          pTooltip="XLS"
+          pTooltip="export table to XLS"
           tooltipPosition="bottom"
         ></button>
         <button
@@ -55,7 +56,7 @@
           icon="pi pi-file-pdf"
           (click)="exportTableToPDF(dt)"
           class="p-button-warning mr-2"
-          pTooltip="PDF"
+          pTooltip="export table to PDF"
           tooltipPosition="bottom"
         ></button>
       </div>
@@ -242,3 +243,15 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="card"> -->
+<p-toast></p-toast>
+<!-- <button
+    type="button"
+    pButton
+    pRipple
+    (click)="show()"
+    label="Show"
+    class="p-button-success"
+  ></button>
+</div> -->

@@ -5,10 +5,18 @@ import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  exports: [RippleModule, ToastModule, ChartModule, ButtonModule, TableModule],
+  exports: [
+    RippleModule,
+    ToastModule,
+    ChartModule,
+    ButtonModule,
+    TableModule,
+    TooltipModule,
+  ],
 })
 export class PrimeModule {}
