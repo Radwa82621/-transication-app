@@ -7,7 +7,12 @@ import { Customer } from '../interfaces/customer';
 export class SearchPipe implements PipeTransform {
 
   transform(value: Customer[],term:string): Customer[] {
-    return value.filter((el)=>el.name.toLowerCase().includes(term.toLowerCase())); 
+    if(value==undefined){
+      return []
+    }else{
+      return value.filter((el)=>el.name.toLowerCase().includes(term.toLowerCase())); 
+
+    }
   }
 
 }

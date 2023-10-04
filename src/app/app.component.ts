@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { Customer ,Transication} from 'src/app/shared/interfaces/customer';
 
 @Component({
@@ -7,22 +8,15 @@ import { Customer ,Transication} from 'src/app/shared/interfaces/customer';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
  
   title = 'transication';
 
-  constructor() {
-    // this.customersArray = this.customers.customers
-    // console.log(this.customersArray);
-    // this.customersArray.forEach((el) => {
-    //   console.log(el);
-    //   this.total=0
-    //   el.transications.forEach((item: any) => {
-    //     this.total += item.price
-    //     console.log(this.total);
-    //   })
-      
-    // })
+  constructor( private _messageService:MessageService) {
+   
+  }
+  ngOnInit(): void {
+    // this._messageService.add({ severity: 'success', summary: 'Hello', detail: "please expand the rows to view customer's transacations " });
   }
 
 }
