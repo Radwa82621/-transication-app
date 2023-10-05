@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "transications",
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/transications/browser/**"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Customer, Transication } from 'src/app/shared/interfaces/customer';
 import { CustomerTransicationsService } from 'src/app/shared/services/customer-transications.service';
@@ -7,6 +7,8 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import * as XLSX from 'xlsx';
 import { Table } from 'primeng/table';
 import { saveAs } from 'file-saver';
+import { isPlatformBrowser } from '@angular/common';
+import { log } from 'console';
 declare module 'pdfmake/build/vfs_fonts';
 interface Column {
   field: string;
@@ -49,16 +51,23 @@ export class TableComponent implements OnInit {
   searchTerm: string = '';
   searchAmount!: number;
   filterValue!: number;
+
   constructor(
+    private messageService: MessageService,
     private _CustomerTransicationsService: CustomerTransicationsService,
-    private messageService: MessageService
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.show();
     this.cashCounter = 0;
     this.visaCounter = 0;
-    (this.EwalletCounter = 0),
-      ((window as any).pdfMake.vfs = pdfFonts.pdfMake.vfs);
+    this.EwalletCounter = 0;
+    if (isPlatformBrowser(platformId)) {
+      (window as any).pdfMake.vfs = pdfFonts.pdfMake.vfs;
+    }
   }
+  // private _CustomerTransicationsService = Inject(CustomerTransicationsService);
+
+  // private messageService = Inject(MessageService);
   ngOnInit(): void {
     this.getCustomers();
 
@@ -78,8 +87,8 @@ export class TableComponent implements OnInit {
   }
 
   getCustomers() {
-    this._CustomerTransicationsService.Customers.subscribe({
-      next: (res) => {
+    this._CustomerTransicationsService.getCustomers().subscribe({
+      next: (res: any) => {
         console.log(res);
         const updatedData = res.customers.map((obj: any) => ({
           ...obj,
@@ -89,7 +98,7 @@ export class TableComponent implements OnInit {
 
         this.customers = updatedData;
       },
-      error: (err) => {
+      error: (err: any) => {
         console.log(err);
       },
     });
@@ -238,9 +247,9 @@ export class TableComponent implements OnInit {
             table: {
               headerRows: 1,
               body: [
-                table._columns.map((col) => col.header),
+                table._columns?.map((col) => col.header),
                 ...table.value.map((row) =>
-                  table._columns.map((col) => row[col.field])
+                  table._columns?.map((col) => row[col.field])
                 ),
               ],
             },
@@ -264,13 +273,13 @@ export class TableComponent implements OnInit {
       let csv = '';
 
       // Construct the header row
-      const headerRow = table.columns.map((col) => col.header);
-      csv += headerRow.join(',') + '\n';
+      const headerRow = table.columns?.map((col) => col.header);
+      csv += headerRow?.join(',') + '\n';
 
       // Construct the data rows
       for (const row of table.value) {
-        const rowData = table.columns.map((col) => row[col.field]);
-        csv += rowData.join(',') + '\n';
+        const rowData = table.columns?.map((col) => row[col.field]);
+        csv += rowData?.join(',') + '\n';
       }
 
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });

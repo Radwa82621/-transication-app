@@ -12,7 +12,8 @@
       class="w-50 form-control m-5 me-1"
       placeholder="search By Amount"
     />
-    <p-button label="search" (click)="filter()"></p-button>
+    <!-- <p-button label="search" class="rounded" (click)="filter()"></p-button> -->
+    <button class="rounded btn btn-primary" (click)="filter()">search</button>
   </div>
   <p-table
     #dt
@@ -31,33 +32,35 @@
     <ng-template pTemplate="caption">
       <div class="d-flex gap-4">
         <button
+          class="btn btn-lg btn-primary rounded d-flex justify-content-center align-items-center"
           type="button"
           pButton
           pRipple
           icon="pi pi-file"
           (click)="exportTableToCSV(dt)"
-          class="mr-2"
           pTooltip="export table to CSV"
         ></button>
+
         <button
+          class="btn btn-lg btn-success rounded d-flex justify-content-center align-items-center"
           type="button"
           pButton
           pRipple
           icon="pi pi-file-excel"
           (click)="exportTableToExcel(dt)"
-          class="p-button-success mr-2"
           pTooltip="export table to XLS"
           tooltipPosition="bottom"
         ></button>
+
         <button
           type="button"
           pButton
           pRipple
           icon="pi pi-file-pdf"
           (click)="exportTableToPDF(dt)"
-          class="p-button-warning mr-2"
           pTooltip="export table to PDF"
           tooltipPosition="bottom"
+          class="btn btn-lg btn-danger rounded d-flex justify-content-center align-items-center"
         ></button>
       </div>
     </ng-template>
