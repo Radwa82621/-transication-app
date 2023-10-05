@@ -8,6 +8,7 @@ import * as XLSX from 'xlsx';
 import { Table } from 'primeng/table';
 import { saveAs } from 'file-saver';
 import { isPlatformBrowser } from '@angular/common';
+import { log } from 'console';
 declare module 'pdfmake/build/vfs_fonts';
 interface Column {
   field: string;
@@ -65,6 +66,9 @@ export class TableComponent implements OnInit {
       (window as any).pdfMake.vfs = pdfFonts.pdfMake.vfs;
     }
   }
+  // private _CustomerTransicationsService = Inject(CustomerTransicationsService);
+
+  // private messageService = Inject(MessageService);
   ngOnInit(): void {
     this.getCustomers();
 
@@ -86,12 +90,17 @@ export class TableComponent implements OnInit {
   getCustomers() {
     this._CustomerTransicationsService.getCustomers().subscribe({
       next: (res: any) => {
+        console.log(res);
         const updatedData = res.customers.map((obj: any) => ({
           ...obj,
           transactionLength: obj.transications.length,
         }));
+        console.log(updatedData);
 
         this.customers = updatedData;
+      },
+      error: (err: any) => {
+        console.log(err);
       },
     });
   }
@@ -106,6 +115,7 @@ export class TableComponent implements OnInit {
     this.yCount = 0;
     this.byCount = 0;
     this.customerTransication = transicatios;
+    console.log(this.customerTransication);
     this.customerTransication.forEach((element) => {
       if (element.payment_method == 'cash') {
         this.cashCounter++;
@@ -167,6 +177,8 @@ export class TableComponent implements OnInit {
     this.byArray.forEach((el) => {
       this.byCount += el.price;
     });
+
+    console.log(this.tCount + this.byCount + this.yCount);
 
     const textColorSecondary = documentStyle.getPropertyValue(
       '--text-color-secondary'
