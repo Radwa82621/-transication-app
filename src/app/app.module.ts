@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
-import { ChartComponent } from './components/chart/chart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,7 +17,6 @@ import { PrimeModule } from './shared/modules/modules/prime/prime.module';
   declarations: [
     AppComponent,
     TableComponent,
-    ChartComponent,
     NavbarComponent,
     SearchPipe,
     SearchByAmountPipe,
