@@ -7,19 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchByAmountPipe } from './shared/pipes/search-by-amount.pipe';
-import { SearchPipe } from './shared/pipes/search.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { MessageService } from 'primeng/api';
 import { PrimeModule } from './shared/modules/modules/prime/prime.module';
+import { SearchByNamePipe } from './shared/pipes/search-by-name.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     NavbarComponent,
-    SearchPipe,
     SearchByAmountPipe,
+    SearchByNamePipe,
   ],
   imports: [
     BrowserModule,

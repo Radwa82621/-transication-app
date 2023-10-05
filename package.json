@@ -13,6 +13,11 @@
     "prerender": "ng run transication:prerender",
     "vercel-build": "npm run build:ssr"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.8",

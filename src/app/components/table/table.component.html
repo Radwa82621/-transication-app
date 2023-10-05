@@ -1,23 +1,17 @@
 <div class="card">
   <div class="d-flex justify-content-center align-items-center">
-    <input
-      type="text"
-      [(ngModel)]="searchTerm"
-      class="w-50 form-control m-5"
-      placeholder="search by customer name"
-    />
-    <input
+    <input type="text" class="form-control w-50 m-5" [(ngModel)]="searchName" />
+    <!-- <input
       type="number"
       [(ngModel)]="filterValue"
       class="w-50 form-control m-5 me-1"
       placeholder="search By Amount"
     />
-    <!-- <p-button label="search" class="rounded" (click)="filter()"></p-button> -->
-    <button class="rounded btn btn-primary" (click)="filter()">search</button>
+    <button class="rounded btn btn-primary" (click)="filter()">search</button> -->
   </div>
   <p-table
     #dt
-    [value]="customers | search : searchTerm"
+    [value]="customers | searchByName : searchName"
     dataKey="name"
     [tableStyle]="{ 'min-width': '60rem' }"
     [paginator]="true"
@@ -90,7 +84,7 @@
         </td>
         <td>{{ customer.name }}</td>
         <td>{{ customer.id }}</td>
-        <td>{{ customer.total | currency : "USD" }}</td>
+        <td>{{ customer.total }}</td>
         <td>{{ customer.transications.length }}</td>
         <!-- <td> <input type="number" [(ngModel)]="searchAmount"> </td> -->
         <td>
@@ -247,14 +241,4 @@
   </div>
 </div>
 
-<!-- <div class="card"> -->
 <p-toast></p-toast>
-<!-- <button
-    type="button"
-    pButton
-    pRipple
-    (click)="show()"
-    label="Show"
-    class="p-button-success"
-  ></button>
-</div> -->

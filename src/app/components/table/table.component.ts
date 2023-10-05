@@ -26,6 +26,8 @@ interface ExportColumn {
   providers: [MessageService],
 })
 export class TableComponent implements OnInit {
+  searchName: string = '';
+
   cols!: Column[];
 
   exportColumns!: ExportColumn[];
@@ -47,7 +49,6 @@ export class TableComponent implements OnInit {
   yCount: number = 0;
   byCount: number = 0;
 
-  searchTerm: string = '';
   searchAmount!: number;
   filterValue!: number;
 
