@@ -1,11 +1,11 @@
 {
   "version": 2,
   "public": true,
-  "name": "transications",
+  "name": "transication",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "api/index.js": {
-      "includeFiles": "dist/transications/browser/**"
+      "includeFiles": "dist/transication/browser/**"
     }
   }
 }
